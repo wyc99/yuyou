@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册预游</title>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/Loginy/mycss.css" rel="stylesheet" />
+		<style>
+			.message{
+				margin-top:0.5rem;
+			}
+			.message p{
+				font-size:20px;
+				font-family:"微软雅黑";
+				color:#1f1f1f;
+				letter-spacing: 2px;
+			}
+			#myinput input{
+				padding:0;
+				margin: 0;
+				color:#19b6bc;
+				font-size:30px;
+				text-align:center;
+				width:2.55rem;
+				margin: 0 auto;
+				
+			}
+			#myinput .timer{
+				margin-top:0.2rem;
+				border: none;
+				color:#9a9595;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="mui-content">
+			<h1>验证手机</h1>
+			<div class="message">
+				<p>我们发送了4位验证码至</p>
+				<p class='tel'>156 2061 2220</p>
+			</div>
+			
+			<form id="myinput">
+				<input type="text" name="phone" id="" value="" placeholder="" autofocus=""/>
+				<button class="timer">59s后可重新获取验证码</button>
+			</form>
+			<div class="more">
+				<a href="home.html">
+					确定
+				</a>
+			</div>
+		</div>
+		<script src='../js/common.js'></script>
+		<script src="../js/mui.min.js"></script>
+		<script src='../js/jquery.js'></script>
+		<script>
+			
+			mui.init();
+			var countdown=60; 
+	(function settime(obj) { 
+	    if (countdown == 0) { 
+	       obj.removeAttr("disabled");    
+
+	        obj.text("免费获取验证码"); 
+	        countdown = 60; 
+	        return;
+	    } else { 
+	        obj.attr("disabled", true); 
+
+	        obj.text("重新发送(" + countdown + ")"); 
+	        countdown--; 
+	    } 
+		setTimeout(function() { 
+	   	 settime(obj) }
+	    ,1000) 
+	})($('#myinput .timer'));
+  
+
+		</script>
+	</body>
+</html>

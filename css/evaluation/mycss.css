@@ -1,0 +1,60 @@
+*{
+	text-align:left;
+}
+.content{
+	margin-top:0.15rem;
+}
+.two-w{
+	background-color: white;
+	
+}
+.two-w li{
+	padding-right: 0;
+	
+}
+.two-w #star{
+	float:right;
+}
+.two-y{
+	padding-top:0.1rem;
+	background-color: white;
+	color: darkgray;
+	font-size: 13px;
+	
+}
+.two-y textarea{
+	border: none;
+	height:1.5rem;
+	margin: 0;
+	font-size:13px;
+}
+.two-y textarea:focus{
+	font-size:15px;
+}
+.cai,#fa{
+	
+}
+.two-y .cai{
+	margin-left: 0.2rem;
+}
+.two-y #fa{
+	float: right;
+	margin-right:0.3rem ;
+}
+
+
+.three-w p{
+	font-size: 13px;
+	
+}
+
+
+.mui-media-body{
+	font-size: 14px;
+	
+}
+.mui-media-body .money{
+	font-size: 12px;
+	margin-top:0.25rem;
+}
+

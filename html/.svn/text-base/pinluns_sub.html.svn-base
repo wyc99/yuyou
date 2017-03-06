@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/Home/style.css" />
+		<style>
+			body{
+				background-color:white;
+			}
+			#refreshContainer{
+				background-color:white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll" id='comment'>
+				<!--数据列表-->
+				
+				<ul id='list'>
+					<li>
+						<a class='pinluns'>
+							<div class='l avatar'><img src="../images/avatar/avatar1.png" alt="" /></div>
+						<div class='r cont'>
+							<div class="li-tit">
+								<b class='l'>Simon</b>
+								<span class='r star'>
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_11.png" alt="" />
+									<img src="../images/star/star_11.png" alt="" />
+								</span>
+							</div>
+							<div class="li-body">
+								<p>
+									环境很不错！水很清澈，也很甜。唯一美中不足的地方就是**有点****。
+								</p>
+							</div>
+							<div class="li-foot">
+								<span>17:32</span>
+								<span class='time'>一天前</span>
+							</div>
+						</div>
+						</a>
+						
+					</li>
+					<li>
+						<a class='pinluns'>
+						<div class='l avatar'><img src="../images/avatar/avatar2.png" alt="" /></div>
+						<div class='r cont'>
+							<div class="li-tit">
+								<b class='l'>Wenda</b>
+								<span class='r star'>
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_11.png" alt="" />
+									<img src="../images/star/star_11.png" alt="" />
+								</span>
+							</div>
+							<div class="li-body">
+								<p>
+									要喝一杯酸奶来压一压一肚子的泳池。
+								</p>
+							</div>
+							<div class="li-foot">
+								<span>17:40</span>
+								<span class='time'>一天前</span>
+							</div>
+						</div>
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src='../js/jquery.js'></script>
+		<script>
+			function pullfresh() {
+				//上拉刷新
+				//业务逻辑代码，比如通过ajax从服务器获取新数据；
+				$('#list li:first').clone(true).insertBefore($('#list li:first'));
+				//注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+			}
+
+			function pushadd() {
+				//下拉加载
+				//业务逻辑代码，比如通过ajax从服务器获取新数据；
+				$('#list li:first').clone(true).appendTo($('#list'));
+
+				//注意：
+				//1、加载完新数据后，必须执行如下代码，true表示没有更多数据了：
+				//2、若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+				mui('#refreshContainer').pullRefresh().endPullupToRefresh(false);
+			}
+			mui.init({
+				pullRefresh: {
+					container: "#refreshContainer", //下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+					down: {
+						height: 50, //可选,默认50.触发下拉刷新拖动距离,
+						contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+						contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+						contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+						callback: pullfresh //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					},
+					up: {
+						height: 50, //可选.默认50.触发上拉加载拖动距离
+						//				      auto:true,//可选,默认false.自动上拉加载一次
+						contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+						contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: pushadd //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					}
+				}
+			});
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,17 @@
+#content{
+	margin-top:0.8rem;
+}
+.mui-input-row label{
+	text-align: left;
+	color:#b4b4b4;
+	font-size:16px;
+}
+.mui-input-row .mui-numbox,.mui-input-row .mui-btn{
+    float: left;
+  	margin-left: 0;
+
+}
+.mui-input-row .dp{
+	
+}
+

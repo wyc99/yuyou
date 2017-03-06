@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>评论详情</title>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/common.css" />
+		
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-pull-left">
+		    	返回
+		    </a>
+		    <h1 class="mui-title">评论详情</h1>
+		    <a class="mui-btn  mui-btn-link mui-pull-right">我的</a>
+		</header>
+		
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src='../js/zepto.min.js'></script>
+		<script>
+			$('.mui-bar .mui-btn').click(function(){
+				mui.openWindow({
+					url:'personal.html',
+				});
+				return false;
+			});
+			mui.init({
+				gestureConfig:{
+					doubletap:true
+				},
+			    subpages:[{
+			      url:'pinluns_sub.html',
+			      id:'pinluns_sub',
+			      styles:{
+			        top:'45px',//mui标题栏默认高度为45px；
+			        bottom:'0px'//默认为0px，可不定义；
+			      }
+			    }]
+			  });
+			 
+			function plusReady(){
+				// 隐藏滚动条
+				
+				
+				mui.plusReady(function(){
+	     			plus.webview.currentWebview().setStyle({scrollIndicator:'none'});
+	     			
+					
+	     			
+					//监听标题栏的双击事件,双击标题栏，回到顶部。
+					var contentWebview = null;
+					//监听标题栏的双击事件
+					document.querySelector('header').addEventListener('doubletap',function () {
+						if(contentWebview==null){
+							contentWebview = plus.webview.currentWebview().children()[0];
+						}
+						//内容区滚动到顶部
+						contentWebview.evalJS("mui('#refreshContainer').pullRefresh().scrollTo(0,0,100)");
+					});
+					
+					
+				});
+				
+		}
+		if(window.plus){
+			plusReady();
+		}else{
+			document.addEventListener('plusready',plusReady,false);
+		}
+		</script>
+	</body>
+</html>
+

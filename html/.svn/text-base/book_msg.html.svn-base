@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>预约详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/detail/detail.css" />
+	</head>
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">标题</h1>
+		</header>-->
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-pull-left">返回</a>
+		    <h1 class="mui-title">预约信息</h1>
+		     <a class="mui-btn  mui-btn-link mui-pull-right" href='personal.html'>我的</a>
+		</header>
+		<div class="mui-content">
+			<div class="mui-row sone">
+					<div class="mui-col-sm-3 mui-col-xs-3 one-l">
+						<div class="simg"><img src="../images/pond.jpg"/></div>
+					</div>
+					<div class="mui-col-sm-9 mui-col-xs-9 one-r">
+						<!--<div class="mui-row">-->
+							<div class='tit'>
+								<span class='l'>水上公园游泳馆</span>
+								<a href="detail.html" class='r'><img src="../images/detail/carrow.png"/></a>
+							</div>
+							<!--<div></div>-->
+						<!--</div>-->
+						<p><span class="mui-icon mui-icon-paperplane"></span>天津市南开区南开六纬路2802号</p>
+						<p><span class="mui-icon mui-icon-phone"></span>022 2718 2718</p>
+					</div>
+			</div><!--.row-->
+			<div class="mui-row stwo">
+				<ul>
+					<li>
+						<img src="../images/star/star_11.png"/>
+						<img src="../images/star/star_11.png"/>
+						<img src="../images/star/star_11.png"/>
+						<img src="../images/star/star_11.png"/>
+						<img src="../images/star/star_11.png"/>
+					</li>
+					<li class="two-r">待使用</li>
+				</ul>
+				
+			</div>
+			<div class="sthree">
+				<div class="con">
+					<ul>
+						<li class="li-one"><i class="cont">联系人</i><span class="name">刘海涛</span></li>
+						<li><i class="cont">联系电话</i><span>15622105643</span></li>
+						<li><i class="cont">预约人数</i><span>3人</span></li>
+						<li><i class="cont">预约时间</i><span>2016年10月31日 13:00-15:00</span></li>
+						<li><i class="cont">现场支付</i><span>53元</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sfour">
+				<p class="four-p">扫二维码现场验证</p>
+				<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined cancel">取消预约</button>
+				<center>
+				<img src="../images/detail/code.jpg" /></center>
+			</div>
+		</div>
+		<script src='../js/mui.min.js'></script>
+		<script src="../js/common.js"></script>
+		<script>
+			mui.init();
+		</script>
+	</body>
+</html>
+

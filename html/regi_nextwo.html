@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册预游</title>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/Loginy/mycss.css" rel="stylesheet" />
+		<script src="../js/mui.min.js"></script>
+		<script src='../js/zepto.min.js'></script>
+	</head>
+	<body>
+		<div class="mui-content">
+			<h1>注册预游</h1>
+			<form id="myinput">
+				<input type="password" name="psw"  id="psw" value="" placeholder="请输入密码"/>
+				<input type="password" name="psw_rept"   id="psw_rept" value="" placeholder="请再次输入密码"/>
+			</form>
+			<div class="more">
+				<a id='regist'>
+					确定
+				</a>
+			</div>
+		</div>
+		<script src='../js/common.js'></script>
+		<script>
+			mui.init();
+			var userphone ;
+			mui.plusReady(function(){
+				$('.more a').click(function(){
+					if($('#psw').val()==''){
+						plus.nativeUI.toast('密码不能为空');
+						return false;
+					}
+					if($('#psw').val()!==$('#psw_rept').val()){
+						plus.nativeUI.toast('两次密码不一致，请重新输入');
+						return false;
+					}
+						
+					
+					var self = plus.webview.currentWebview();
+					userphone= self.phone;
+					
+					var url='http://10.96.104.226:81/yueba/index.php/Home/Regist/regist';
+	               
+	        mui.ajax(url,{
+
+					data:{
+						'phone':userphone,
+						'password':$('#psw').val()
+					},
+					dataType:'json',//服务器返回json格式数据
+					type:'post',//HTTP请求类型
+					timeout:10000,//超时时间设置为10秒；
+					success:function(data){
+					//服务器返回响应，根据响应结果，分析是否登录成功；
+						if(data.status){
+						   plus.nativeUI.toast(data.msg);
+				           mui.openWindow({
+				           	url:'login.html'
+				           })
+						  
+						}else{
+							
+						}
+					},
+					error:function(xhr,type,errorThrown){
+					//异常处理；
+						console.log(type);
+					}
+				});
+				
+				})
+			})
+			
+		</script>
+	</body>
+</html>

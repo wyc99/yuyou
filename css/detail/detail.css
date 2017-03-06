@@ -1,0 +1,147 @@
+
+.mui-content{
+	margin-top: 0.1rem;
+	text-align:left;
+}
+.sone{
+	
+	background-color: white;
+	position: relative;
+}
+
+.simg{
+	width: 0.7rem;
+	margin: 0.18rem 0.13rem;
+}
+.simg img{
+	width: 0.7rem;
+	height: 0.7rem;
+}
+.one-r{
+	padding-top: 0.18rem;
+}
+
+.one-r span{
+	font-size: 14px;
+}
+.one-r img{
+	width: 0.16rem;
+	height: 0.16rem;
+	line-height: 0.32rem;
+	margin-left: 1.1rem;
+	position: absolute;
+	right: 0.12rem;
+}
+.one-r p{
+	height: 0.16rem;
+	line-height:0.16rem;
+	margin-top: 0.07rem;
+}
+
+
+.stwo{
+	height: 0.48rem;
+	background-color: white;
+	margin-top: 0.1rem;
+	padding-left: 0.12rem;
+}
+.stwo li{
+	float: left;
+	line-height: 0.48rem;
+}
+.stwo li img{
+	width: 0.16rem;
+	height: 0.16rem;
+	vertical-align: middle;
+}
+.stwo .two-r{
+	font-size: 0.16rem;
+	line-height: 0.48rem;
+	color:#bbbbbb;
+	position: absolute;
+	right: 0.14rem;
+}
+
+.sthree{
+	padding-top:0.28rem;
+	padding-bottom: 0.25rem;
+	background-color: white;
+	margin-top: 0.1rem;
+	
+}
+
+.sthree li{
+	margin-left: 0.12rem;
+	font-size: 0.16rem;
+	height: 0.3rem;
+}
+.sthree li .cont{
+	color: #b4b4b4;
+	font-style: normal;
+	float:left;
+	display: block;
+	width:20%;
+
+}
+.sthree li.li-one .cont{
+	letter-spacing: 0.081rem;
+}
+.sfour{
+	height: 2.07rem;
+	background-color: white;
+	margin-top: 0.1rem;
+	position: relative;
+}
+.four-p{
+	font-size: 0.16rem;
+	padding-top: 0.25rem;
+	text-align: center;
+}
+.cancel{
+	font-size: 0.14rem;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.15rem;
+	border-radius: 0.03rem;
+}
+.sfour img{
+	width: 1.18rem;
+	height: 1.18rem;
+}
+/*-----------------------预约信息----------------------------------------*/
+
+/*--------------------resucc预约成功-----------------------------------*/
+.three-suc,.four-suc{
+	margin: 0 0.12rem 0.12rem;
+}
+.three-suc{
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	position: relative;
+}
+.suc-t{
+	font-size: 0.16rem;
+	color: #b4b4b4;
+}
+.suc-t span{
+	position: absolute;
+	top: 0.26rem;
+	right: 1.3rem;
+}
+.suc-t img{
+	width: 0.28rem;
+	height: 0.28rem;
+	margin-left: 1.3rem;
+}
+.three-suc li{
+	margin-left:0.2rem;
+}
+.point{
+	height: 1.48rem;
+	background-color: white;
+	font-size: 0.16rem;
+	margin: 0 0.12rem 0.12rem;
+}
+.point p{
+	padding: 0.2rem 0.3rem;
+}

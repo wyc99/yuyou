@@ -1,0 +1,121 @@
+
+#menu{
+	overflow:hidden;
+	height:34px;
+	margin-top:5px;
+	border:0;
+}
+
+#menu>a{
+	background-color:#fff;
+	float:left;
+	width:33%;
+	margin-right:0.3%;
+	height:100%;
+	position:relative;
+	display: block;
+	font-size:16px;
+	color:black;
+	line-height:34px;
+	border: 0;
+}
+
+#menu>a.act{
+	border-bottom:1px solid #48c4c6;
+	color:#48c4c6;
+}
+
+
+#menu>a:after{
+	content:'';
+	width:0;
+	height:0;
+	display: block;
+	position:absolute;
+	right:0;
+	bottom: 0;
+	width: 0;
+    height: 0;
+    border-bottom: 0.1rem solid #dcdcdc;
+    border-left: 0.1rem solid transparent;
+}
+
+#menu>a.act:after{
+	border-bottom: 0.1rem solid #48c4c6;
+}
+
+#menu>a.last{
+	margin-right: 0;
+}
+.options li{
+	text-align:left;
+	font-size:16px;
+	color:#C0C0C0;
+}
+
+.options li.act{
+	color:#48c4c6;
+}
+.menu-search{
+	margin-top: 5px;
+	height:34px;
+	padding-right:0.1rem;
+	overflow: hidden;
+	/*不支持box*/
+    display:block;
+    background-color:#48c4c6;
+    margin-bottom:5px;
+}
+.menu-search>div{
+	box-sizing: content-box;
+}
+.location{
+	float:left;
+}
+.search{
+	float:right;
+}
+.search input{
+	
+	float:right;
+    height:30px;
+    margin-top:2px;
+    border-radius: 0.2rem;
+    font-size:16px;
+    border: 0px;
+    padding-left:0.32rem;
+    background:white url(../../images/search.png) no-repeat 2px 2px;
+    background-size:25px 25px;
+   
+}
+.location a{
+	text-align:left;
+	line-height:34px;
+	color:white;
+	font-size:16px;
+	display:block;
+	padding:0 0.1rem;
+}
+.location span{
+	font-size:14px;
+}
+#refreshContainer{
+	position: absolute;
+  	top: 126px !important;
+  	z-index: -1;
+}
+
+.hidden{
+	margin-top:5px;
+	display: none;
+}
+.mui-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:-1;
+    background-color: rgba(0,0,0,.3);
+}
+

@@ -1,0 +1,37 @@
+
+body{
+	background-color: white;
+}
+
+.mui-content{
+	background-color: white;
+}
+
+.mui-table-view .mui-media-object {
+    line-height: 70px;
+     max-width: 70px;} 
+.mui-content li{
+	/*margin-top: 23px;*/
+}
+.uname{
+	margin-right: 29.6%;
+}
+.user span img{
+	width: 15px;
+	height: 15px;
+	
+}
+.comment-right{
+	width: 62.5%;
+	border-bottom: 1px solid #c6c6c6;
+	background-color: white;
+}
+.colck{
+	margin-right: 15px;
+}
+.mui-table-view::before{
+	background-color: transparent;
+}
+.mui-table-view::after{
+	background-color: transparent;
+}

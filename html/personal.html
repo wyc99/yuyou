@@ -1,0 +1,90 @@
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/personal/mycss.css" rel="stylesheet" />	
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		
+		<div class="mui-content" id='container'>			
+			
+ 			<header class="mui-bar mui-bar-nav" id="myheader">
+			    <a class="mui-action-back  mui-pull-left">返回</a>
+			   	 <a href="selfedit.html" class="mui-btn mui-btn-link mui-btn-nav mui-pull-right styal2">
+	  			 编辑   		
+	  			</a>	
+			</header>		
+            <div class="headimg">			
+				<img src="../images/avatar.jpg" alt="user" class='avatar'>	
+				<div class="mui-content-padded ">
+		             <p class='username'>Smion</p>
+		             <p class='userphone'>{{userphone}}</p>
+          		</div>
+			</div>
+			
+			<div class="content">
+				<div class="mui-row oner">
+					<h3 class='l'>我的订单</h3>
+					<a href="" class='r all'>全部订单</a>
+				</div>
+				<div class="mui-row twor">
+					 <div class="mui-col-sm-6 mui-col-xs-6 first">
+					 	<a href="book_msg.html">
+					 		<img src="../images/avatar/shalou.png" alt="" />
+					 		<p>待使用</p>
+					 	</a>
+					 	
+					 </div>
+					 <div class="mui-col-sm-6 mui-col-xs-6">
+					 	<a href="pinjia.html">
+					 		<img src="../images/avatar/daipingjia.png" alt="" />
+					 		<p>待评价</p>
+					 	</a>
+					 	
+					 </div>
+				</div>
+				<div class="mui-row threer">
+				    
+				        <li class="mui-table-view-cell">
+				            <a class="mui-navigate-right">
+				               评价管理  
+				            </a>
+				        </li>
+				   
+				
+				
+				        <li class="mui-table-view-cell">
+				            <a class="mui-navigate-right">
+				               帐号管理
+				            </a>
+				        </li>
+				  
+				</div>
+			</div>
+			
+
+				
+		</div>
+         
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				var userphone=plus.storage.getItem('userphone');
+				new Vue({
+					el:'#container',
+					data:{
+						'userphone':userphone,
+					}
+				})
+			});
+			
+		</script>
+	</body>
+
+</html>

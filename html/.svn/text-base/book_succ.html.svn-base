@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>预约详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/detail/detail.css" />
+	</head>
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">标题</h1>
+		</header>-->
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-pull-left">返回</a>
+		    <h1 class="mui-title">预约信息</h1>
+		    <a class="mui-btn  mui-btn-link mui-pull-right" href='personal.html'>我的</a>
+		</header>
+		<div class="mui-content">
+			<div class="sthree three-suc">
+				<div class="con">
+					<!--<center>-->
+						<span class="suc-t">
+							<img src="../images/detail/success.png"/>
+							<span>您已预约成功！</span>
+						</span>
+					<!--</center>-->
+				<ul>
+					<li class="li-one"><i class="cont">联系人</i><span class="name">刘海涛</span></li>
+					<li><i class="cont">联系电话</i><span>15622105643</span></li>
+					<li><i class="cont">预约人数</i><span>3人</span></li>
+					<li><i class="cont">预约时间</i><span>2016年10月31日 13:00-15:00</span></li>
+					<li><i class="cont">现场支付</i><span>53元</span></li>
+				</ul>
+				</div>
+			</div>
+			<div class="sfour four-suc">
+				<p class="four-p">扫二维码现场验证</p>
+				<center>
+					<img src="../images/detail/code.jpg" />
+				</center>
+			</div>
+			<div class="point">
+				<p>
+					温馨提示：请在当日预约时间段前扫码验证现场支付，
+					过时后系统将不予为您保留号源。此号源将作为爽约
+					处理。当月爽约三次，将不能在平台上进行预约等操作。
+				</p>
+			</div>
+		</div>
+		<script src='../js/mui.min.js'></script>
+		<script src="../js/common.js"></script>
+		<script>
+			mui.init();
+		</script>
+	</body>
+</html>
+

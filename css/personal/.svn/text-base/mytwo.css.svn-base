@@ -1,0 +1,45 @@
+
+.head{
+	background-color: white;
+	height: 1rem;
+	margin-top: 0.75rem;
+}
+
+.head .edit p{
+	height:100%;
+	line-height: 1rem;
+	margin-left:0.2rem;
+	font-size:15px;
+	
+}
+.ziliao{	
+	background-color: white;
+	margin-top: 0.17rem;
+	padding-left: 0.1rem;
+	padding-right: 0.1rem;
+}
+
+.ziliao .mui-input-row{
+	height: 0.63rem;
+	line-height: 0.63rem;
+}
+.ziliao .mui-input-row label{
+	margin:0;
+	padding:0;
+	line-height: 0.63rem;
+	font-size: 0.18rem;
+	color: gray;
+	text-align: left;
+	padding-left:0.2rem;
+}
+.mui-input-row input{
+	height: 100%;
+}
+img{
+	width: 0.72rem;
+	height: 0.72rem;
+	border-radius: 50% 50%;
+	margin-left: 0.13rem;
+	margin-top: 0.12rem;	
+}
+

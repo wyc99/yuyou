@@ -1,0 +1,380 @@
+{
+  "index.html": {
+    "resources": [
+      "js/common.js",
+      "css/common.css",
+      "html/home.html",
+      "css/start.css",
+      "images/bg.jpg",
+      "html/login.html",
+      "html/register.html",
+      "js/mui.enterfocus.js",
+      "css/muin.min.css",
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "js/zepto.min.js",
+      "css/mui.min.css",
+      "js/jquery.raty.js",
+      "images/img/star-off.png",
+      "js/jquery.js"
+    ],
+    "refer": [
+      "html/home.html",
+      "html/login.html",
+      "html/register.html"
+    ]
+  },
+  "html/home.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/Home/home.css",
+      "index.html",
+      "js/common.js",
+      "css/common.css",
+      "html/home_sub.html",
+      "fonts/mui.ttf",
+      "js/zepto.min.js",
+      "images/search.png",
+      "html/search.html",
+      "html/personal.html",
+      "js/mui.picker.js",
+      "js/mui.poppicker.js",
+      "js/city.data.js",
+      "js/jquery.js",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "images/pond/tjcd2.jpg",
+      "css/Home/freshsub.css",
+      "images/img/star-on.png",
+      "js/jquery.raty.js",
+      "images/img/star-off.png",
+      "js/vue.js"
+    ],
+    "refer": [
+      "index.html",
+      "html/home_sub.html",
+      "html/search.html",
+      "html/personal.html",
+      "html/detail.html"
+    ]
+  },
+  "html/login.html": {
+    "resources": [
+      "images/Loginy/weibo.png",
+      "images/Loginy/weixin.png",
+      "css/Loginy/mycss.css",
+      "images/Loginy/QQ.png",
+      "css/mui.min.css",
+      "index.html",
+      "js/mui.min.js",
+      "js/common.js",
+      "css/common.css",
+      "html/home.html"
+    ],
+    "refer": [
+      "index.html",
+      "html/home.html"
+    ]
+  },
+  "html/register.html": {
+    "resources": [
+      "index.html",
+      "css/Loginy/mycss.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/common.js",
+      "css/common.css",
+      "html/regi_next.html",
+      "js/zepto.min.js"
+    ],
+    "refer": [
+      "index.html",
+      "html/regi_next.html"
+    ]
+  },
+  "html/home_sub.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/pond/tjcd.jpg",
+      "fonts/mui.ttf",
+      "css/Home/freshsub.css",
+      "css/common.css",
+      "js/common.js",
+      "images/star/star_09.png",
+      "images/star/star_11.png",
+      "images/star/stark.png",
+      "images/star/star.png",
+      "js/zepto.min.js",
+      "js/jquery.js",
+      "images/pond/tjcd2.jpg",
+      "images/pond/tjcd3.jpg",
+      "js/jquery.raty.js",
+      "images/img/star-on.png",
+      "images/img/star-off.png"
+    ],
+    "refer": [
+      "html/detail.html"
+    ]
+  },
+  "html/search.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "html/home.html",
+      "css/Home/search.css",
+      "images/pond.jpg",
+      "js/common.js",
+      "css/common.css"
+    ],
+    "refer": [
+      "html/home.html"
+    ]
+  },
+  "html/personal.html": {
+    "resources": [
+      "html/home.html",
+      "images/avatar.jpg",
+      "css/personal/mycss.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "css/mui.min.css",
+      "images/avatar/daipingjia.png",
+      "images/avatar/shalou.png",
+      "images/bg.jpg",
+      "html/selfedit.html",
+      "images/196.jpg",
+      "fonts/mui.ttf",
+      "html/detail.html",
+      "html/pinluns.html",
+      "html/booking.html",
+      "html/book_succ.html",
+      "html/book_msg.html",
+      "html/pinjia.html"
+    ],
+    "refer": [
+      "html/home.html",
+      "html/selfedit.html",
+      "html/detail.html",
+      "html/pinluns.html",
+      "html/booking.html",
+      "html/book_succ.html",
+      "html/book_msg.html",
+      "html/pinjia.html"
+    ]
+  },
+  "html/detail.html": {
+    "resources": [
+      "images/phone.png",
+      "images/pond/tjcd2.jpg",
+      "images/addr.png",
+      "images/pond/tjcd3.jpg",
+      "css/Home/style.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "js/zepto.min.js",
+      "css/mui.min.css",
+      "images/pond/tjcd.jpg",
+      "images/avatar/avatar2.png",
+      "images/star/star_11.png",
+      "images/avatar/avatar1.png",
+      "images/grid/icon_11.gif",
+      "images/grid/icon_09.gif",
+      "images/grid/icon_15.gif",
+      "images/star/star_09.png",
+      "images/grid/icon_13.gif",
+      "images/grid/icon_21.gif",
+      "images/grid/icon_23.gif",
+      "images/heart.png",
+      "images/msg.png",
+      "images/star/star.png",
+      "images/star/stark.png",
+      "html/booking.html",
+      "html/pinluns.html",
+      "html/book_succ.html",
+      "html/personal.html"
+    ],
+    "refer": [
+      "html/booking.html",
+      "html/pinluns.html",
+      "html/book_succ.html",
+      "html/personal.html"
+    ]
+  },
+  "html/regi_next.html": {
+    "resources": [
+      "js/common.js",
+      "css/Loginy/mycss.css",
+      "js/mui.min.js",
+      "css/common.css",
+      "css/mui.min.css",
+      "html/home.html",
+      "js/jquery.js",
+      "html/regi_next.html",
+      "html/register.html"
+    ],
+    "refer": [
+      "html/home.html",
+      "html/regi_next.html",
+      "html/register.html"
+    ]
+  },
+  "html/booking.html": {
+    "resources": [
+      "css/Booking/mycss.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "css/mui.min.css",
+      "html/detail.html",
+      "fonts/mui.ttf",
+      "css/Booking/book.css",
+      "html/booking.html",
+      "js/zepto.min.js",
+      "js/mui.dtpicker.js",
+      "js/mui.picker.min.js",
+      "css/mui.picker.min.css",
+      "html/book_succ.html",
+      "html/personal.html",
+      "html/pinjia.html"
+    ],
+    "refer": [
+      "html/detail.html",
+      "html/booking.html",
+      "html/book_succ.html",
+      "html/personal.html",
+      "html/pinjia.html"
+    ]
+  },
+  "html/pinluns.html": {
+    "resources": [
+      "css/pinluns/valuation.css",
+      "images/star/star_09.png",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "js/zepto.min.js",
+      "images/star/star_11.png",
+      "css/mui.min.css",
+      "images/pond.jpg",
+      "html/detail.html",
+      "html/pinluns_sub.html",
+      "fonts/mui.ttf",
+      "html/personal.html"
+    ],
+    "refer": [
+      "html/detail.html",
+      "html/pinluns_sub.html",
+      "html/personal.html"
+    ]
+  },
+  "html/pinluns_sub.html": {
+    "resources": [
+      "css/pinluns/valuation.css",
+      "images/pond.jpg",
+      "images/star/star_09.png",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "images/star/star_11.png",
+      "css/mui.min.css",
+      "js/jquery.js",
+      "fonts/mui.ttf",
+      "images/avatar/avatar2.png",
+      "images/avatar/avatar1.png",
+      "css/Home/style.css"
+    ],
+    "refer": []
+  },
+  "html/book_succ.html": {
+    "resources": [
+      "images/detail/carrow.png",
+      "css/detail/detail.css",
+      "fonts/mui.ttf",
+      "images/detail/five1.png",
+      "images/pond.jpg",
+      "images/detail/code.jpg",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "css/mui.min.css",
+      "html/booking.html",
+      "html/detail.html",
+      "images/star/star_11.png",
+      "html/personal.html",
+      "images/detail/success.png"
+    ],
+    "refer": [
+      "html/booking.html",
+      "html/detail.html",
+      "html/personal.html"
+    ]
+  },
+  "html/selfedit.html": {
+    "resources": [
+      "personal/mytwo.css",
+      "js/jquery.js",
+      "html/personal.html",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/196.jpg",
+      "css/personal/mytwo.css",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "images/user-photo.png"
+    ],
+    "refer": [
+      "html/personal.html"
+    ]
+  },
+  "html/book_msg.html": {
+    "resources": [
+      "images/pond.jpg",
+      "html/personal.html",
+      "images/detail/carrow.png",
+      "css/detail/detail.css",
+      "images/detail/code.jpg",
+      "images/star/star_11.png",
+      "js/common.js"
+    ],
+    "refer": [
+      "html/personal.html"
+    ]
+  },
+  "html/pinjia.html": {
+    "resources": [
+      "js/zepto.min.js",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/common.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/evaluation/mycss.css",
+      "images/detail/carrow.png",
+      "images/pond.jpg",
+      "css/detail/detail.css",
+      "html/personal.html",
+      "js/jquery.raty.js",
+      "js/jquery.js",
+      "images/img/star-off.png",
+      "images/img/star-on.png",
+      "images/takephoto.png",
+      "html/booking.html",
+      "js/utitls.js",
+      "css/feedback-page.css",
+      "images/iconfont-tianjia.png",
+      "css/font-awesome.min.css",
+      "fonts/fontawesome-webfont.ttf",
+      "images/addphoto.png"
+    ],
+    "refer": [
+      "html/personal.html",
+      "html/booking.html"
+    ]
+  }
+}

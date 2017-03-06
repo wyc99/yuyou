@@ -1,0 +1,114 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/personal/mytwo.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back  mui-pull-left">返回</a>
+			<h1 class="mui-title">编辑我的资料</h1>
+		</header>
+		<div class="mui-content">
+
+			<div class="mui-row head">
+				<div class="mui-col-sm-12">
+					
+					<div class="mui-input-row edit">
+						
+							
+						<img id="code_img" src="../images/user-photo.png" />
+						<p class='r'>编辑头像</p>
+						
+					</div>
+				</div>
+			</div>
+			<div class="mui-row ziliao">
+				<div class="mui-col-sm-12 mui-col-xs-12">
+					<form class="mui-input-group">
+						<div class="mui-input-row">
+							<label>昵称</label>
+							<input type="sex" class="mui-input-clear" placeholder="" value="Simon">
+						</div>
+						<div class="mui-input-row">
+							<label>性别</label>
+							<input type="sex" class="mui-input-clear" placeholder="" value="男">
+						</div>
+						<div class="mui-input-row">
+							<label>生日</label>
+							<input type="bir" class="mui-input-clear" placeholder="" value="10月28日">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src='../js/mui.min.js'></script>
+		<script src="../js/common.js"></script>
+		<script src='../js/jquery.js'></script>
+		<script type="text/javascript">
+			mui.init();
+			
+			
+			function plusReady() {  
+        		
+	    	}  
+		    if (window.plus) {  
+		        plusReady();  
+		    } else {  
+		        document.addEventListener('plusready', plusReady, false);  
+		    }  
+		    
+		    $('.edit').click(function(){
+		    	showActionSheet();
+		    });
+		    function showActionSheet(){  
+              
+              var actionbuttons=[{title:"拍照"},{title:"相册选取"}];  
+              var actionstyle={title:"选择照片",cancel:"取消",buttons:actionbuttons};  
+              plus.nativeUI.actionSheet(actionstyle, function(e){  
+                    if(e.index==1){  
+                        getImage();  
+                    }else if(e.index==2){  
+                        galleryImg();  
+                    }  
+              } );  
+        	}
+		    function getImage(){
+				var cmr = plus.camera.getCamera();
+				cmr.captureImage( function ( p ) {
+					plus.io.resolveLocalFileSystemURL(p, function(entry) {  
+//                    alert(entry.toLocalURL());//file:///storage/emulated/0/Android/data/io.dcloud...../doc/camera/1467602809090.jpg  
+//                    alert(entry.name);//1467602809090.jpg  
+                      $('#code_img').attr('src',entry.toLocalURL());
+                    	 
+	                }, function(e) {  
+	                    plus.nativeUI.toast("读取拍照文件错误：" + e.message);  
+	                }); 
+				}, function ( e ) {
+					
+				}, {filename:"_doc/gallery/",index:1} );
+			}
+		    
+		    
+		    
+		    // 从相册中单选图片
+        	function galleryImg() {
+	
+			    plus.gallery.pick( function(path){
+	
+			        $('#code_img').attr('src',path);
+			        
+			    }, function ( e ) {
+//			    	outSet( "取消选择图片" );
+			    }, {filter:"image"} );
+			}
+		</script>
+	</body>
+
+</html>

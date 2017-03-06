@@ -1,0 +1,4 @@
+document.documentElement.style.fontSize = window.innerWidth/4.32 + 'px';
+//h5 plus事件 
+
+

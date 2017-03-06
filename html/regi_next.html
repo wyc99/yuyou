@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册预游</title>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/Loginy/mycss.css" rel="stylesheet" />
+		<script src="../js/mui.min.js"></script>
+		<script src='../js/jquery.js'></script>
+		<style>
+			.message{
+				margin-top:0.5rem;
+			}
+			.message p{
+				font-size:20px;
+				font-family:"微软雅黑";
+				color:#1f1f1f;
+				letter-spacing: 2px;
+			}
+			#myinput input{
+				padding:0;
+				margin: 0;
+				color:#19b6bc;
+				font-size:30px;
+				text-align:center;
+				width:2.55rem;
+				margin: 0 auto;
+				
+			}
+			#myinput .timer{
+				margin-top:0.2rem;
+				border: none;
+				color:#9a9595;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="mui-content">
+			<h1>验证手机</h1>
+			<div class="message">
+				<p>我们发送了4位验证码至</p>
+				<p class='tel' id="tel"></p>
+			</div>
+			
+			<form id="myinput">
+				<input type="text" name="checkcode" id="checkcode" value="" placeholder="" autofocus=""/>
+				<button class="timer">免费获取验证码</button>
+				<div class="more" >
+				<a>
+					下一步
+				</a>
+			</div>
+			</form>
+			
+		</div>
+		<script src='../js/common.js'></script>
+		
+		<script>
+			
+			mui.init();
+			var userphone ;
+			var checkcode;
+			mui.plusReady(function(){
+				var self = plus.webview.currentWebview();
+				userphone= self.phone;
+				checkcode=self.checkcode;
+				$('#tel').text(userphone);
+			});
+			
+	     var countdown=60; 	
+	    
+	(function settime(obj) { 
+	    if (countdown == 0) { 
+	       obj.removeAttr("disabled");    
+	        obj.text("免费获取验证码"); 
+	        countdown = 60; 
+	       	 var url='http://10.96.104.226:81/yueba/index.php/Home/Regist/dx';
+	        var userphone=$('#tel').text();
+	        mui.ajax(url,{
+
+					data:{
+						'phone':userphone,
+					},
+					dataType:'json',//服务器返回json格式数据
+					type:'post',//HTTP请求类型
+					timeout:10000,//超时时间设置为10秒；
+					success:function(data){
+					//服务器返回响应，根据响应结果，分析是否登录成功；
+						if(data.status){
+				          checkcode=data.data;
+							
+						}else{
+							
+						}
+					},
+					error:function(xhr,type,errorThrown){
+					//异常处理；
+						console.log(type);
+					}
+				});
+	        return;
+	    } else { 
+	        obj.attr("disabled", true); 
+	        obj.text("发送成功(" + countdown + ")"); 
+	        countdown--; 
+	    } 
+		setTimeout(function() { 
+	   	 settime(obj) }
+	    ,1000) 
+	})($('#myinput .timer'));
+ $('.more a').on('tap',function(){
+ 	if($('#checkcode').val()==checkcode){
+ 		mui.openWindow({
+			url:'regi_nextwo.html',
+			id:'regi_nextwo.html',
+			extras:{
+		      phone:userphone,
+		    }
+		});
+ 	}else{
+ 		plus.nativeUI.toast('验证码错误');
+ 	}
+ })
+		</script>
+	</body>
+</html>

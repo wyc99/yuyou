@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/Booking/book.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-pull-left">返回</a>
+		    <h1 class="mui-title">预约信息</h1>
+		    <a class="mui-btn  mui-btn-link mui-pull-right" href='personal.html'>我的</a>
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group" id="content">
+			    	<div class="mui-input-row">
+				        <label for='username'>联系人</label>
+					    <input type="text" class="mui-input-clear" placeholder="请输入用户名" id="username">
+					    
+				    </div>
+				    <div class="mui-input-row">
+				        <label for='phone'> 电话</label>
+				        <input type="text" class="mui-input-clear" placeholder="请输入手机号" id='phone'>
+				    </div>
+				    <div class="mui-input-row">
+				        <label for='count'>人数</label>
+				        <span class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='10'>
+						  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+						  <input class="mui-numbox-input" type="number" />
+						  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+						</span>
+				    </div>
+				    <div class="mui-input-row dp" id="demo7"  data-options='{"type":"hour","customData":{"h":[{"text":"9:00-11:00","value":"9:00-11:00"},{"text":"11:00-13:00","value":"11:00-13:00"},{"text":"13:00-15:00","value":"13:00-15:00"},{"text":"15:00-17:00","value":"15:00-17:00"},{"text":"17:00-19:00","value":"17:00-19:00"},{"text":"19:00-21:00","value":"19:00-21:00"}]},"labels":["年", "月", "日", "时段", "分"]}'>
+				       	
+			       		<label >
+			        		选择时段...
+			        	</label>
+				       
+				         <input type="text" name='dtresult' id='dtres'/>
+				    </div>
+		
+				    <div class="mui-input-row">
+				        <label>支付</label>
+				        <input type="text" class="mui-input-clear" disabled value="现场支付">
+				    </div>
+				    
+			</form>	
+			
+			<div class="more"><a href="book_succ.html">下一步</a></div>
+		</div>
+		<script src='../js/mui.min.js'></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/mui.dtpicker.js"></script>
+		<script src='../js/mui.picker.min.js'> </script>
+		<script>
+			mui.init();
+			(function($) {
+				
+				var result = $('#dtres')[0];
+				var btns = $('.dp');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							/*
+							 * rs.value 拼合后的 value
+							 * rs.text 拼合后的 text
+							 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+							 * rs.m 月，用法同年
+							 * rs.d 日，用法同年
+							 * rs.h 时，用法同年
+							 * rs.i 分（minutes 的第二个字母），用法同年
+							 */
+							result.value =  rs.text;
+							/* 
+							 * 返回 false 可以阻止选择框的关闭
+							 * return false;
+							 */
+							/*
+							 * 释放组件资源，释放后将将不能再操作组件
+							 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+							 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+							 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+							 */
+							picker.dispose();
+						});
+					}, false);
+				});
+			})(mui);
+		</script>
+		
+	</body>
+</html>

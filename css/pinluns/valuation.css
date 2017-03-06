@@ -1,0 +1,55 @@
+
+body{
+	background-color: white;
+}
+.comment1{
+	padding-top: 20px;
+	text-align: left;
+	margin: 0 auto;
+}
+.mui-action-back span{
+	font-size: 16px;
+	color: black;
+}
+.mui-title{
+	font-size: 18px;
+}
+.mui-content{
+	background-color: white;
+}
+#photo{
+	width: 70px;
+	height: 70px;
+	border-radius: 35px;
+	margin-left: 4.4%;
+	margin-right: 5.6%;
+}
+.mui-table-view .mui-media-object {
+    line-height: 70px;
+     max-width: 70px;} 
+
+.uname{
+	margin-right: 29.6%;
+}
+.user span img{
+	width: 15px;
+	height: 15px;
+	
+}
+.comment-right{
+	width: 65%;
+	border-bottom: 1px solid #c6c6c6;
+	background-color: white;
+}
+.comment-right .l{
+	float:left;
+}
+.comment-right .r{
+	float:right;
+}
+.mui-table-view::before{
+	background-color: transparent;
+}
+.mui-table-view::after{
+	background-color: transparent;
+}

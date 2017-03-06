@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/Home/style.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-pull-left">
+		    	返回
+		    </a>
+		    <h1 class="mui-title">天津财经大学游泳馆</h1>
+		    <a class="mui-btn  mui-btn-link mui-pull-right" href='personal.html'>我的</a>
+		</header>
+		<div class="mui-content" id="mycontent">
+		   	<!--slider start-->
+			<div id="slider" class="mui-slider">
+				<div class="count">
+					<span>1</span>/<span>6</span>
+				</div>
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/pond/tjcd3.jpg">
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/pond/tjcd.jpg">
+							
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/pond/tjcd2.jpg">
+							
+						</a>
+					</div>
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/pond/tjcd3.jpg">
+							
+						</a>
+					</div>
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/pond/tjcd.jpg">
+						</a>
+					</div>
+					<!--额外增加的一个节点，放底部信息-->
+					
+				</div>
+				<div class="mui-slider-title">
+					<ul>
+						<li style="float:left;">
+							<img src="../images/heart.png" alt="" />
+							<span>29人想去</span>
+						</li>
+						<li style="float:right;">
+							<img src="../images/msg.png" alt="" />
+							<span>42条评论</span>
+						</li>
+					</ul>
+					<span class="star">
+						<img src="../images/star/star.png" alt="" />
+						<img src="../images/star/star.png" alt="" />
+						<img src="../images/star/star.png" alt="" />
+						<img src="../images/star/stark.png" alt="" />
+						<img src="../images/star/stark.png" alt="" />
+					<span>
+				</div>
+			</div>
+			<!--.mui-slider end-->
+			<!--#intro start-->
+			<div id="intro">
+				<h2>天津财经大学游泳馆</h2>
+				<ul class="item">
+					<li>水质  <b>8.1</b></li>
+					<li>环境  <b>8.1</b></li>
+					<li>划算   <b>9.0</b></li>
+					<li>人均   ￥<b class='prise'>30/人</b></li>
+				</ul>
+				<ul class="time">
+					<li>夏秋季  <span>8:00-21:00</span></li>
+					<li>冬春季  <span>9:00-20:00</span></li>
+				</ul>
+			</div>
+			<!--#intro end-->
+			<!--#address start-->
+			<div id="addr">
+				<address>
+					天津市南开区六纬路2802号
+				</address>
+				<p class='two'>022 2718 2718</p>
+				<ul>
+					<li><a ><img src="../images/addr.png" alt="" /></a></li>
+					<li class="two"><a><img src="../images/phone.png" alt="" /></a></li>
+				</ul>
+			</div>
+			<!--#address end-->
+			<!--#grid start-->
+			<div id="grid">
+				<ul>
+					<li>
+						<a>
+							<img src="../images/grid/icon_09.gif"/>
+							<p>免费WI-FI</p>
+						</a>
+					</li>
+					<li>
+						<a>
+							<img src="../images/grid/icon_11.gif"/>
+							<p>自助餐</p>
+						</a>
+					</li>
+					<li>
+						<a>
+							<img src="../images/grid/icon_13.gif"/>
+							<p>免费充电</p>
+						</a>
+					</li>
+					<li>
+						<a>
+							<img src="../images/grid/icon_15.gif"/>
+							<p>有偿泳具</p>
+						</a>
+					</li>
+					<li>
+						<a>
+							<img src="../images/grid/icon_21.gif"/>
+							<p>VIP服务</p>
+						</a>
+					</li>
+					<li>
+						<a>
+							<img src="../images/grid/icon_23.gif"/>
+							<p>有偿洗衣</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--#grid end-->
+			<!--#comment start-->
+			<div id="comment">
+				<ul>
+					<li>
+						<a class='pinluns'>
+							<div class='l avatar'><img src="../images/avatar/avatar1.png" alt="" /></div>
+						<div class='r cont'>
+							<div class="li-tit">
+								<b class='l'>Simon</b>
+								<span class='r star'>
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_11.png" alt="" />
+									<img src="../images/star/star_11.png" alt="" />
+								</span>
+							</div>
+							<div class="li-body">
+								<p>
+									环境很不错！水很清澈，也很甜。唯一美中不足的地方就是**有点****。
+								</p>
+							</div>
+							<div class="li-foot">
+								<span>17:32</span>
+								<span class='time'>一天前</span>
+							</div>
+						</div>
+						</a>
+						
+					</li>
+					<li>
+						<a class='pinluns'>
+						<div class='l avatar'><img src="../images/avatar/avatar2.png" alt="" /></div>
+						<div class='r cont'>
+							<div class="li-tit">
+								<b class='l'>Wenda</b>
+								<span class='r star'>
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_09.png" alt="" />
+									<img src="../images/star/star_11.png" alt="" />
+									<img src="../images/star/star_11.png" alt="" />
+								</span>
+							</div>
+							<div class="li-body">
+								<p>
+									要喝一杯酸奶来压一压一肚子的泳池。
+								</p>
+							</div>
+							<div class="li-foot">
+								<span>17:40</span>
+								<span class='time'>一天前</span>
+							</div>
+						</div>
+						</a>
+					</li>
+					
+				</ul>
+				<div class="more">
+					<a class='pinluns'>
+						查看更多42条
+					</a>
+				</div>
+			</div>
+			<div id="yue">
+				<a href="booking.html">
+					立刻预约
+				</a>
+			</div>
+			<!--#comment end-->
+		</div>
+		<!--.mui-content end-->
+		
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script src='../js/zepto.min.js'></script>
+		<script type="text/javascript">
+			
+			mui.init();
+			$('.pinluns').click(function(){
+						mui.openWindow({
+    						url:'pinluns.html',
+						});
+						return false;
+					})
+		</script>
+	</body>
+
+</html>

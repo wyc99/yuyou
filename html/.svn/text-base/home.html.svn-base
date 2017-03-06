@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<head>
+		<meta charset="UTF-8">
+		<title>主页</title>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/Home/home.css" />
+		<link rel="stylesheet" href="../css/Home/freshsub.css" />
+	</head>
+	</head>
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">预约游泳馆</h1>
+		    <a class="mui-btn  mui-btn-link mui-pull-right" >我的</a>
+		</header>
+		<div class="mui-content">
+			<div class="menu-search">
+				<div class="location" id='city'>
+					<a  data-href='city'>
+						<span class="mui-icon mui-icon-location"></span>{{city}}<span class='mui-icon mui-icon-arrowdown'></span>
+					</a>
+				
+				</div>
+				<div class='search '>
+					<input type="text"  placeholder="搜索" disabled/>
+				</div>
+				
+			</div>
+			<div id="menu" class="menu">
+				<a data-href='arround' >附近</a>
+				<a data-href='order' >智能排序</a>
+				<a data-href='filter' >筛选</a>
+			</div>
+			
+			<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+	
+			  			
+			  <div class="mui-scroll">
+			    <!--数据列表-->
+			    <ul class="mui-table-view mui-table-view-chevron" id='list'>
+			      <li class='item'>
+			      	<a >
+			      		<div>
+			      			<img src="../images/pond/tjcd2.jpg" alt="" class='bj'/>
+			      			<div class="tit">
+			      				<p>财经大学游泳馆</p>
+			      				<div>
+			      					<span class="first"><span class='mui-icon mui-icon-paperplane first'></span>南开六纬路</span>
+			      					<span>￥30/时</span>
+			      					<span id='star'>
+			      						
+			      					</span>
+			      				</div>
+			      			</div>
+			      			
+			      		</div>
+			      	</a>
+			      </li>
+				  <li class='item'>
+			      	<a >
+			      		<div>
+			      			<img src="../images/pond/tjcd2.jpg" alt="" class='bj'/>
+			      			<div class="tit">
+			      				<p>财经大学游泳馆</p>
+			      				<div>
+			      					<span class="first"><span class='mui-icon mui-icon-paperplane first'></span>南开六纬路</span>
+			      					<span>￥30/时</span>
+			      					<span id='star'>
+			      						
+			      					</span>
+			      				</div>
+			      			</div>
+			      			
+			      		</div>
+			      	</a>
+			      </li>
+			      <li class='item'>
+			      	<a >
+			      		<div>
+			      			<img src="../images/pond/tjcd2.jpg" alt="" class='bj'/>
+			      			<div class="tit">
+			      				<p>财经大学游泳馆</p>
+			      				<div>
+			      					<span class="first"><span class='mui-icon mui-icon-paperplane first'></span>南开六纬路</span>
+			      					<span>￥30/时</span>
+			      					<span id='star'>
+			      						
+			      					</span>
+			      				</div>
+			      			</div>
+			      			
+			      		</div>
+			      	</a>
+			      </li>
+			    </ul>
+			  </div>
+			</div>
+		</div>
+		<div class='sec-menu'>
+				<div id="arround" class="hidden">
+				  <ul class="mui-table-view options">
+				    <li class="mui-table-view-cell"><a href="#">附近</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item2</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item3</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item4</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item5</a></li>
+				  </ul>
+				</div>
+				<div id="order" class="hidden">
+				  <ul class="mui-table-view options">
+				    <li class="mui-table-view-cell"><a href="#">智能排序</a></li>
+				    <li class="mui-table-view-cell"><a href="#">好评优先</a></li>
+				    <li class="mui-table-view-cell"><a href="#">离我最近</a></li>
+				    <li class="mui-table-view-cell"><a href="#">单价最低</a></li>
+				  </ul>
+				</div>
+				
+				<div id="filter" class="hidden">
+				  <ul class="mui-table-view options">
+				    <li class="mui-table-view-cell"><a href="#">筛选</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item2</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item3</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item4</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item5</a></li>
+				  </ul>
+				</div>
+				<div id="city" class="hidden">
+				  <ul class="mui-table-view options">
+				    <li class="mui-table-view-cell"><a href="#">城市</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item2</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item3</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item4</a></li>
+				    <li class="mui-table-view-cell"><a href="#">Item5</a></li>
+				  </ul>
+				</div>
+		</div>
+		
+		<script src='../js/mui.min.js'></script>
+		<script src="../js/common.js"></script>
+		<script src='../js/jquery.js'></script>
+		<script src="../js/jquery.raty.js" type="text/javascript"></script>
+		<script src="../js/mui.pullToRefresh.js"></script>
+		<script src="../js/mui.pullToRefresh.material.js"></script>
+		<script src='../js/vue.js'></script>
+		<script>
+		var mask ;
+		mui.init();
+		//用户点击蒙版时执行的回调；
+		mask= mui.createMask(function(){
+			$('.sec-menu>div').addClass('hidden');
+			$('.menu>a').removeClass('act');
+		});
+		$('.search').width($('.menu-search').width()-$('.location').width()-5);
+		
+		
+		
+		$('.menu>a').on('tap',function(){
+	
+			$('.sec-menu>div').addClass('hidden');
+			var href=$(this).attr('data-href');
+			$('#'+href).removeClass('hidden');
+			var content=$(this).text();
+			$('#'+href).find('a:contains('+content+')').parent('li').addClass('act');
+			
+			$('.menu>a').removeClass('act');
+			$(this).addClass('act');
+			mask.show();//显示遮罩
+			
+			
+		});
+		$('.sec-menu li').on('tap',function(){
+			$('.sec-menu li').removeClass('act');
+			
+			var content=$(this).find('a').text();
+			$(this).addClass('act');
+			var id=$(this).parent('ul').parent('div').attr('id');
+			$('a[data-href='+id+']').text(content);
+			var id=$(this).parent('ul').parent('div').addClass('hidden');
+			mask.close();//关闭遮罩
+		})
+		$('.item #star').raty({
+		       	 path:"../images/img",
+		       	 size:24,
+		       	 readOnly:true,
+		       	 score:2
+       	});
+		//阻尼系数
+		var deceleration = mui.os.ios?0.003:0.0009;
+		mui('.mui-scroll-wrapper').scroll({
+			bounce: true,
+			indicators: true, //是否显示滚动条
+			deceleration:deceleration
+		});
+		mui.ready(function() {
+					//循环初始化所有下拉刷新，上拉加载。
+					
+						mui('#refreshContainer').pullToRefresh({
+							down: {
+						
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+										 $('.item:first').clone(true).insertBefore($('.item:first'));
+									     //注意，加载完新数据后，必须执行如下代码，注意：若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+									   self.endPullDownToRefresh();
+									}, 1000);
+								}
+							},
+							up: {
+	
+								callback: function() {
+									var self = this;
+									setTimeout(function() {
+										  $('.item:first').clone(true).appendTo($('#list'));
+				  
+			   
+									     //注意：
+									     //1、加载完新数据后，必须执行如下代码，true表示没有更多数据了：
+									     //2、若为ajax请求，则需将如下代码放置在处理完ajax响应数据之后
+									   self.endPullUpToRefresh();
+									}, 1000);
+								}
+							}
+						});
+		});
+	
+		//点search跳转到新页	
+		$('.search').click(function(){
+						
+			mui.openWindow({
+						url:'search.html',
+					});
+					
+					return false;
+			
+		});
+		//点我的跳转到新页
+     	$('.mui-bar .mui-btn').on('tap',function(){
+						
+			mui.openWindow({
+				url:'personal.html',
+			});
+			return false;
+		});
+		
+		$('.item a').on('tap',function(){
+						
+			mui.openWindow({
+				url:'detail.html',
+			});
+			return false;
+		});
+	     			
+		
+	     	
+	     	
+			
+			function plusReady(){
+				mui.plusReady(function(){
+	     			
+					//返回键处理，双击退出应用	
+					var backButtonPress = 0;
+					mui.back = function(event) {
+						backButtonPress++;
+						if (backButtonPress > 1) {
+							plus.runtime.quit();
+						} else {
+							plus.nativeUI.toast('再按一次退出应用');
+						}
+						setTimeout(function() {
+							backButtonPress = 0;
+						}, 1000);
+						return false;
+					};
+					
+					
+					
+				});
+				// 使用模块获取系统自带的定位功能定位
+				plus.geolocation.getCurrentPosition( function ( p ) {
+					new Vue({
+						el:'#city',
+						data:{
+							'city':p.address.city
+						}
+					})
+				}, function ( e ) {
+					alert( "Geolocation error: " + e.message );
+				});
+//				
+		}
+		if(window.plus){
+			plusReady();
+		}else{
+			document.addEventListener('plusready',plusReady,false);
+		}
+		</script>
+	</body>
+</html>

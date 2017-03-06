@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册预游</title>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/Loginy/mycss.css" rel="stylesheet" />
+		
+	</head>
+	<body>
+		<div class="mui-content">
+			<h1>注册预游</h1>
+			<form id="myinput">
+				<input type="text" name="phone" id="phone" value="" placeholder="请输入11位手机号码"/>
+			</form>
+			<div class="more">
+				<a href="">
+					下一步
+				</a>
+			</div>
+		</div>
+		<script src='../js/common.js'></script>
+		<script src="../js/mui.min.js"></script>
+		<script src='../js/zepto.min.js'></script>
+		<script>
+			mui.init();
+			$('.more a').click(function(){
+				
+					mui.openWindow({
+						url:'regi_next.html',
+						
+					});
+					return false;
+					
+			})
+		</script>
+	</body>
+</html>

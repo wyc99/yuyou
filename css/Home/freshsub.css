@@ -1,0 +1,44 @@
+
+
+.item a{
+	display: block;
+	color:white;
+	width:100%;
+	position: relative;
+	text-align: left;
+}
+.item a img.bj{
+	width:100%;
+	height:2rem;
+}
+.item .tit{
+	position: absolute;
+	bottom:0.1rem;
+	left:0;
+	width:100%;
+	padding-left:0.1rem;
+}
+.item .tit p{
+	font-size:18px;
+	font-weight: bold;
+	color:white;
+	padding:0;
+	margin:0;
+	
+}
+.item .tit span{
+	margin-left:0.34rem;
+	font-size:14px;
+}
+.item .tit span.first{
+	margin-left: 0px;
+}
+.item .tit #star{
+	float:right;
+}
+.item .tit #star img{
+	vertical-align: middle;
+}
+
+
+

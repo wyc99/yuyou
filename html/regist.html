@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册预游</title>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link href="../css/Loginy/mycss.css" rel="stylesheet" />
+		<script src="../js/mui.min.js"></script>
+		<script src='../js/zepto.min.js'></script>
+	</head>
+	<body>
+		<div class="mui-content">
+			<h1>注册预游</h1>
+			<form id="myinput">
+				<input type="text" name="phone" id="phone" value="" placeholder="请输入11位手机号码"/>
+				<div class="more">
+					<a>
+						下一步
+					</a>
+				</div>
+			</form>
+			
+		</div>
+		<script src='../js/common.js'></script>
+		
+		<script>
+			mui.init();
+			mui.plusReady(function(){
+				$('.more a').click(function(){
+				
+					var userphone=$('#phone').val();
+					if(userphone==''){
+						plus.nativeUI.toast('手机号不能为空');
+						return false;
+					}
+					
+					var url='http://10.96.104.226:81/yueba/index.php/Home/Regist/dx';
+					
+				mui.ajax(url,{
+
+					data:{
+						'phone':userphone
+					},
+					dataType:'json',//服务器返回json格式数据
+					type:'post',//HTTP请求类型
+					timeout:10000,//超时时间设置为10秒；
+					success:function(data){
+					//服务器返回响应，根据响应结果，分析是否登录成功；
+						if(data.status){
+							mui.openWindow({
+								url:'regi_next.html',
+								id:'regi_next.html',
+								extras:{
+							      phone:userphone,
+							      checkcode:data.data.checkcode
+							    }
+							});
+							
+						}else{
+							plus.nativeUI.toast(data.msg);
+						}
+					},
+					error:function(xhr,type,errorThrown){
+					//异常处理；
+						console.log(type);
+					}
+				});
+				
+				
+				
+				
+				})
+			})
+			
+		</script>
+	</body>
+</html>

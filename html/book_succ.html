@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>预约详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/detail/detail.css" />
+		<script src='../js/mui.min.js'></script>
+		<script src='../js/vue.js'></script>
+		<script src='../js/jquery.js'></script>
+	</head>
+	<body>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-pull-left">返回</a>
+		    <h1 class="mui-title">预约信息</h1>
+		    <a class="mui-btn  mui-btn-link mui-pull-right">我的</a>
+		</header>
+		<div class="mui-content" id='ordermsg'>
+			<div class="sthree three-suc">
+				<div class="con">
+					<!--<center>-->
+						<span class="suc-t">
+							<img src="../images/detail/success.png"/>
+							<span>您已预约成功！</span>
+						</span>
+					<!--</center>-->
+				<ul>
+					<li class="li-one"><i class="cont">联系人</i><span class="name">{{name}}</span></li>
+					<li><i class="cont">联系电话</i><span>{{phone}}</span></li>
+					<li><i class="cont">预约人数</i><span>{{num}}</span></li>
+					<li><i class="cont">预约时间</i><span>{{time}}</span></li>
+					<li><i class="cont">现场支付</i><span>53元</span></li>
+				</ul>
+				</div>
+			</div>
+			<div class="sfour four-suc">
+				<p class="four-p">扫二维码现场验证</p>
+				<center>
+					<img v-bind:src='qrimgurl' />
+				</center>
+			</div>
+			<div class="point">
+				<p>
+					温馨提示：请在当日预约时间段前扫码验证现场支付，
+					过时后系统将不予为您保留号源。此号源将作为爽约
+					处理。当月爽约三次，将不能在平台上进行预约等操作。
+				</p>
+			</div>
+		</div>
+		
+		<script src="../js/common.js"></script>
+		<script>
+			mui.init();
+			
+			mui.plusReady(function(){
+				var self = plus.webview.currentWebview();
+				new Vue({
+					el:'#ordermsg',
+					data:{
+						'phone':self.phone,
+						'name':self.username,
+						'num':self.num,
+						'time':self.time,
+						'ordertime':self.ordertime,
+						'qrimgurl':self.qrimgurl
+					}
+				})
+				
+				$('.more a').click(function(){
+				  	mui.openWindow({
+						url:'regi_nextwo.html',
+					
+					})
+				})
+				
+			})
+
+		</script>
+	</body>
+</html>
+

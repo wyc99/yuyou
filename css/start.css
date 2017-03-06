@@ -1,0 +1,87 @@
+
+html{
+	background:url(../images/bg.jpg) no-repeat;
+	background-size:cover;
+	text-align: center;
+	
+}
+
+.title{
+	margin-top: 1rem;
+	text-align: center;
+	letter-spacing :2px;
+}
+.title h1{
+	font-size:0.35rem;
+	color: white;
+	font-weight: bold;
+	font-family: "黑体";
+}
+.title p{
+	font-size:14px;
+	color: #f7fafa;
+}
+
+.youke{
+	position: absolute;
+	bottom:0.6rem;
+	left: 0;
+	width: 100%;
+}
+.btns li{
+	display: inline-block;
+    width:40%;
+}
+.btns li a{
+	margin: 0 auto;
+	padding:0.08rem 0.5rem;
+	display: block;
+	color: #eeeeee;
+	border:1px solid #eeeeee;
+	border-radius: 0.5rem;
+	font-size:18px;
+	box-sizing:border-box;
+	font-weight: normal;
+}
+.btns li.act a{
+	background-color:#eeeeee;
+	color:#78acbf;
+}
+.youke p{
+	position: absolute;
+	bottom:0.75rem;
+	width: 100%;
+	text-align:center;
+}
+.youke .jump{
+	font-size:13px;
+	color: white;
+	text-decoration: underline;
+	animation: flash 2s infinite alternate;
+	
+}
+@-moz-keyframes flash{
+	from{
+		opacity:1;
+	}
+	to{
+		opacity:0.2;
+	}
+}
+@keyframes flash{
+	from{
+		opacity:1;
+	}
+	to{
+		opacity:0.2;
+	}
+}
+@-webkit-keyframes flash{
+	from{
+		opacity:1;
+	}
+	to{
+		opacity:0.2;
+	}
+}
+
